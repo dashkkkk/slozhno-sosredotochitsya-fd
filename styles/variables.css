@@ -2,3 +2,13 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --accent-color: #ff0070;
+  --outline-color: rgb(255 0 112 / 0.4);
+  --main-title-color: #db00ff;
+  --subtitles-color: #000028;
+  --main-text-color: #f1b2ce;
+  --main-font-size: 18px;
+  --background-image: url(../images/cover-image-dark.png),
+    linear-gradient(#000028, #000028);
+}
