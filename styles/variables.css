@@ -4,7 +4,12 @@
 */
 :root {
   --accent-color: #ff0070;
+  --button-color: #ff0070;
+  --shadow-color: #ff0070;
+  --angles-color: #ff0070;
+  --word-accent-color: #ff0070;
   --outline-color: rgb(255 0 112 / 0.4);
+  --section-subtitles-color: #ff0070;
   --main-title-color: #db00ff;
   --subtitles-color: #000028;
   --main-text-color: #f1b2ce;

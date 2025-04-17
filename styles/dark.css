@@ -6,8 +6,13 @@
 
 :root.theme-dark {
   --accent-color: #ff0070;
+  --button-color: #ff0070;
+  --shadow-color: #ff0070;
+  --angles-color: #ff0070;
+  --word-accent-color: #ff0070;
   --outline-color: rgb(255 0 112 / 0.4);
   --main-title-color: #db00ff;
+  --sections-subtitles-color: #ff0070;
   --subtitles-color: #000028;
   --main-text-color: #f1b2ce;
   --main-font-size: 18px;
@@ -19,7 +24,3 @@
   */
 }
 
-.theme-dark .page {
-  background-image: var(--background-image);
-  /* Вам также нужно будет написать ряд подобных селекторов */
-}
