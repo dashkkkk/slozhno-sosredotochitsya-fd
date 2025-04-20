@@ -6,15 +6,16 @@
 
 :root.theme-light {
   --background-image: url(../images/cover-image-light.png);
-  --accent-color: rgba(255 141 203);
+  --accent-color: #ff8dcb;
   --word-accent-color: #ff0070;
   --main-text-color: #353430;
   --main-title-color: #ffc2e6;
-  --shadow-color: #ff0070;
+  --shadow-color: #ff8dcb;
   --button-color: #353430;
   --angles-color: #353430;
-  --section-subtitles-color: #353430;
+  --sections-subtitles-color: #252422;
   --outline-color: rgb(50 49 45 / 0.4);
+  --subtitles-color: #353430;
 
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -25,24 +26,24 @@
 @media (prefers-color-scheme: light) {
   :root {
     --background-image: url(../images/cover-image-light.png);
-    --accent-color: rgba(255 141 203);
+    --accent-color: #ff8dcb;
     --main-text-color: #353430;
+    --word-accent-color: #ff0070;
     --main-title-color: #ffc2e6;
-    --shadow-color: #ff0070;
+    --shadow-color: #ff8dcb;
     --button-color: #353430;
     --angles-color: #353430;
+    --sections-subtitles-color: #353430;
     --outline-color: rgb(50 49 45 / 0.4);
+    --subtitles-color: #353430;
   }
 
-   .decorative_sign_header {
-      display: none;
-    }
+  .decorative_sign_header {
+    display: none;
   }
+}
 
-
-
-  /* Вам также нужно будет написать ряд подобных селекторов */
-
+/* Вам также нужно будет написать ряд подобных селекторов */
 
 .theme-light .decorative_sign_header {
   display: none;

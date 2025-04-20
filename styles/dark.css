@@ -24,3 +24,6 @@
   */
 }
 
+.theme-dark .decorative_sign_header {
+  display: inline-flex;
+}
