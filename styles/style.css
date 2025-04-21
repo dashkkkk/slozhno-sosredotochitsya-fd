@@ -2,7 +2,8 @@
 
 .page {
   font-family: "IBM Plex mono", sans-serif;
-  background-image: var(--background-image, linear-gradient(#000028, #000028));
+  background-color: var(--background-color);
+  background-image: var(--background-image);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -267,8 +268,10 @@ h2.title_decor {
   .header__theme-menu {
     padding-top: 0;
   }
-  .header .main_title {
+  .main_title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  .header .main_title {
     padding-top: 0px;
   }
   .header .title_decor {
@@ -305,36 +308,27 @@ h2.title_decor {
 
   .factors {
     display: grid;
-    gap: 20px;
+    gap: var(--main-gap);
     grid-template-rows: repeat(auto-fit, minmax(70px, 1fr));
     grid-template-columns: 1fr 2fr;
     grid-auto-flow: column;
-    grid-template-areas:
-      "factors-title ."
-      "factors-multitasking factors-multitasking"
-      "factors-food factors-food"
-      "factors-gadgets factors-gadgets";
     padding-top: 0;
   }
 
-  .factors h2 {
-    grid-area: factors-title;
-    inline-size: 100%;
-  }
-  .factors_multitasking {
-    grid-area: factors-multitasking;
-  }
-  .factors_food {
-    grid-area: factors-food;
-  }
-  .factors_gadgets {
-    grid-area: factors-gadgets;
+  .factors_container {
+    grid-row: 2 / auto;
+    grid-column: 1 / -1;
+    display: grid;
+    gap: var(--main-gap);
   }
 
   .factors h2 {
+    grid-row: 1 /2;
+    grid-column: 1 / 2;
+    inline-size: 100%;
     padding-bottom: 0;
   }
-
+ 
   .factors .main_text {
     margin-block-end: 0;
   }
@@ -423,27 +417,25 @@ h2.title_decor {
     gap: 20px;
     grid-auto-rows: min-content;
     grid-auto-flow: row;
-    grid-template-areas:
-      "factors-title factors-title factors-title"
-      "factors_multitasking factors_food factors_gadgets";
   }
 
   .factors h2 {
     grid-area: factors-title;
     grid-column: 1 / 2;
+    grid-row: 1 / 2;
   }
 
-  .factors_multitasking {
-    grid-area: factors_multitasking;
+  .factors_container {
+    display: grid;
+    grid-row: 2 / -1;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--main-gap);
+    inline-size: 100%;
+    grid-auto-rows: min-content;
+    grid-auto-flow: row;
   }
 
-  .factors_food {
-    grid-area: factors_food;
-  }
-
-  .factors_gadgets {
-    grid-area: factors_gadgets;
-  }
   .factors .main_text {
     margin-block-end: 20px;
   }
@@ -458,8 +450,5 @@ h2.title_decor {
   }
   .footer {
     min-height: 768px;
-  }
-  .footer .main_title {
-    font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   }
 }
